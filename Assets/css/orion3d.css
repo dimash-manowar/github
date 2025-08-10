@@ -1,0 +1,200 @@
+/* ===== Estilo general Orion3D ===== */
+body {
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+    color: #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Hero Section ===== */
+section.bg-dark, section.bg-black {
+    position: relative;
+    overflow: hidden;
+}
+
+section.bg-dark::before,
+section.bg-black::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveStars 60s linear infinite;
+    z-index: 0;
+}
+
+@keyframes moveStars {
+    from { transform: translate(0, 0); }
+    to { transform: translate(50px, 50px); }
+}
+
+
+
+/* ===== Títulos brillantes ===== */
+h1, h2, h3 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,255,255,0.6), 0 0 20px rgba(0,255,255,0.4);
+}
+
+/* ===== Botones futuristas ===== */
+.btn-primary {
+    background: linear-gradient(90deg, #00c3ff, #0061ff);
+    border: none;
+    box-shadow: 0 0 10px rgba(0,195,255,0.6), 0 0 20px rgba(0,97,255,0.4);
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #0061ff, #00c3ff);
+    box-shadow: 0 0 15px rgba(0,195,255,0.8), 0 0 30px rgba(0,97,255,0.6);
+}
+
+/* Botón contorno */
+.btn-outline-light {
+    border-color: #00c3ff;
+    color: #00c3ff;
+}
+
+.btn-outline-light:hover {
+    background: #00c3ff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0,195,255,0.6), 0 0 20px rgba(0,195,255,0.4);
+}
+
+/* ===== Tarjetas ===== */
+.bg-dark, .bg-black {
+    background-color: #0f0f0f !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0 10px rgba(0,255,255,0.2) !important;
+    transition: 0.3s;
+}
+
+.shadow-sm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,255,255,0.4) !important;
+}
+.bg-black {
+    background-color: #0f0f0f !important;
+}
+
+.shadow-sm {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shadow-sm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,255,255,0.4) !important;
+}
+
+.bi-chat-quote {
+    text-shadow: 0 0 10px rgba(0,255,255,0.6);
+}
+.footer-orion3d {
+    background: linear-gradient(180deg, #0d0d0d, #000000);
+}
+
+.footer-orion3d .footer-link {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-orion3d .footer-link:hover {
+    color: #00c3ff;
+}
+
+.footer-orion3d .social-link {
+    font-size: 1.5rem;
+    color: #aaa;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer-orion3d .social-link:hover {
+    color: #00c3ff;
+    text-shadow: 0 0 10px rgba(0,195,255,0.6);
+}
+
+.footer-orion3d input[type="email"] {
+    background-color: #111;
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.footer-orion3d input[type="email"]:focus {
+    border-color: #00c3ff;
+    box-shadow: 0 0 5px rgba(0,195,255,0.6);
+}
+/* Limitar tamaño de videos e imágenes del slider */
+/* Fondo degradado para testimonios */
+.bg-gradient-testimonios {
+    background: linear-gradient(180deg, #111, #000);
+}
+
+/* Contenedores personalizados */
+.container-testimonios, .container-videos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Separación entre secciones */
+.container-testimonios {
+    margin-bottom: 60px;
+}
+.container-videos {
+    margin-top: 40px;
+}
+
+/* Tamaño ajustado para videos e imágenes */
+.mySwiperVideos video,
+.mySwiperVideos img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+/* Hover elegante */
+.mySwiperVideos video:hover,
+.mySwiperVideos img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0,195,255,0.6);
+    transition: all 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #00c3ff;
+}
+
+.dropdown-menu-dark .dropdown-item:hover {
+    background-color: #00c3ff;
+    color: #000 !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+/* Asegura que la navbar y sus dropdowns estén siempre por encima */
+.navbar { position: relative; z-index: 1100; }
+.navbar .dropdown-menu { z-index: 2000; }
+
+/* Por si algún contenedor tiene overflow que recorta el dropdown */
+header, main, section, .container, .swiper, .hero, .bg-dark, .bg-black {
+  overflow: visible !important;
+}
+
+
+
+
+
+

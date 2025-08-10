@@ -1,0 +1,19 @@
+/vendor/
+/composer.lock
+.env
+storage/
+storage/logs/
+node_modules/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+# Unity (si aplica)
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Oo]bj/
+*.csproj
+*.unitypackage
